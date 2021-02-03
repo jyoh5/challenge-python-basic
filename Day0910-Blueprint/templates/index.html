@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <header>
+      <h1>News</h1>
+      <div>order by</div>
+      {{button |safe }}
+    </header>
+
+    <main>
+      {% for news in result %}
+      <div>
+        <div><h2><a href={{news['objectID']}}>{{news['title']}}</a></h2></div>
+        <div><a href={{news['url']}}>👉 {{news['url']}}</a></div>
+        <span>{{news['created_at'].split('T')[0]}}&emsp;</span>
+        <span>author: {{news['author']}}&emsp;</span>
+        <span>points: {{news['points']}}&emsp;</span>
+        <span>comments: {{news['num_comments']}}</span>
+        <hr>
+      </div>
+      {% endfor %}
+
+    </main>
+  </body>
+</html>
