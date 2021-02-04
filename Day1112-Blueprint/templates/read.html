@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+   <header>
+    <h1>Reddit Reader</h1>
+    <h3>Reading : {% for sub in reddit_data.sub_arr %}{{sub}} / {% endfor %}</h3>
+    <h4><a href="/">Go to home</a></h4>
+  </header>
+
+  <main>
+    {% for data in reddit_data.data%}
+    <div><h3><a href={{data.link}}>{{data.title}}</a></h3></div>
+    <div><b>👍 {{data.bote_count}} | {{data.subreddit}}</b></div>
+    <hr>
+    {% endfor %}
+  </main>
+</body>
+
+</html>
