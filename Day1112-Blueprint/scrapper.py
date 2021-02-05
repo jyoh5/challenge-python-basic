@@ -21,7 +21,7 @@ def get_data(url, subreddit):
       tmp = {}
       tmp["subreddit"] = subreddit
       if bote_count:
-        bc = bote_count.string
+        bc = bote_count.text
         if bc[-1] == "k":
           bc = float(bc[:-1])*1000
         tmp["bote_count"] = int(bc)
@@ -30,7 +30,7 @@ def get_data(url, subreddit):
       # if promoted:
       #   tmp["promoted"] = promoted
       if title:
-        tmp["title"] = title.string
+        tmp["title"] = title.text
       if link:
         tmp["link"] = link["href"]
       result.append(tmp)
