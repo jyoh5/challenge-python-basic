@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find your jobs!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  <header>
+    <h1>
+        <span>S</span>
+        <span>e</span>
+        <span>a</span>
+        <span>r</span>
+        <span>c</span>
+        <span>h</span>
+      </h1>
+    <form action="/search" method="get">
+      <input type="text" placeholder="What kind of job do you want?" name="word">
+    </form>
+  </header>
+</body>
+</html>
